@@ -6,7 +6,7 @@ pipeline {
 
             steps {
                 withMaven(maven : 'maven') {
-                    sh 'mvn clean compile'
+                    sh 'mvn test'
                 }
             }
         }
@@ -15,7 +15,7 @@ pipeline {
 
             steps {
                 withMaven(maven : 'maven') {
-                    sh 'mvn test'
+                    sh 'mvn install'
                 }
             }
         }
